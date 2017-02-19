@@ -1,0 +1,21 @@
+{
+  "name": "url-shortener-microservice",
+  "version": "1.0.0",
+  "description": "third fcc backend api project",
+  "main": "server/server.js",
+  "scripts": {
+    "test": "mocha",
+    "start": "node test/connection.js"
+  },
+  "author": "steve barton",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.16.1",
+    "bootstrap": "^3.3.7",
+    "express": "^4.14.1",
+    "mongoose": "^4.8.3"
+  },
+  "devDependencies": {
+    "mocha": "^3.2.0"
+  }
+}

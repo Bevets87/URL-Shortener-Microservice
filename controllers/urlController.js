@@ -11,7 +11,7 @@ var URL = req.params.url + req.params[0];
 if(validUrl.isUri(URL)){
 findUrl(URL).then(function(result){
   if(!result){
-  var local = req.get('host') + "/";
+  var local = 'https://' + req.get('host') + "/";
   var shortCode = shortid.generate();
   var shortURL = local + shortCode;
   addToDatabase(URL, shortURL).then(function(result){
@@ -37,7 +37,7 @@ findUrl(URL).then(function(result){
 }
 
 exports.get_url = function(req, res, next){
- var local = req.get('host') + "/";
+ var local = 'https://' + req.get('host') + "/";
  var shortCode = req.params.url;
  var shortURL = local + shortCode;
  console.log(shortURL)

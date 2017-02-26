@@ -11,7 +11,7 @@ app.use('/', index);
 app.listen(process.env.PORT || 3000);
 
 // connect to db
-mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/urls');
+mongoose.connect(process.env.MONGODB_URI);
 
 mongoose.connection.once('open',function(){
   console.log('Connection has been made!')
